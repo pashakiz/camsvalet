@@ -1,0 +1,27 @@
+.logo {
+  width: 272px;
+  height: 25px;
+  background-image: url('../img/icons/logo.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  @media (min-width: 992px) {
+    width: 757px;
+    height: 66px;
+  }
+
+  &.logo_main {
+    margin: 50px 0 29px;
+    @media (min-width: 992px) {
+      margin: 119px 0 36px;
+    }
+  }
+
+  &.logo_login {
+    margin: 50px 0 29px;
+    @media (min-width: 992px) {
+      margin: 147px 0 94px;
+    }
+  }
+
+}

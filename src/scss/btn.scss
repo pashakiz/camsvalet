@@ -1,0 +1,164 @@
+.btn {
+  width: 100%;
+  height: 69px;
+  padding: 14px 10px;
+  border-radius: 0;
+  background-color: transparent;
+  background-image: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20758%20158%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M80.5165%202.38723C287.348%2043.9775%20473.659%20-5.08215%20668.831%2025.3382C709.829%2031.7239%20757.593%2057.9119%20757.593%2096.78C757.615%2097.05%20757.637%2097.3201%20757.554%2097.5963C757.198%20128.28%20709.681%20143.189%20668.645%20140.243C464.616%20124.087%20243.641%20186.674%2075.1755%20139.554C41.1879%20127.332%200.143938%2095.7135%200.0270863%2057.9119C-0.0021447%2057.5518%20-0.0240735%2057.2817%200.0516167%2056.9155C-0.0652348%2019.1138%2033.3817%20-7.09077%2080.5165%202.38723Z%22%20fill%3D%22%23FF95E1%22%2F%3E%0A%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100%;
+  border: none;
+  font-family: $font_family;
+  font-size: 16px;
+  font-weight: 400;
+  color: $font_color2;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s background-image;
+  &:hover {
+    color: $font_color2;
+    background-image: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20758%20158%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M80.5165%202.38723C287.348%2043.9775%20473.659%20-5.08215%20668.831%2025.3382C709.829%2031.7239%20757.593%2057.9119%20757.593%2096.78C757.615%2097.05%20757.637%2097.3201%20757.554%2097.5963C757.198%20128.28%20709.681%20143.189%20668.645%20140.243C464.616%20124.087%20243.641%20186.674%2075.1755%20139.554C41.1879%20127.332%200.143938%2095.7135%200.0270863%2057.9119C-0.0021447%2057.5518%20-0.0240735%2057.2817%200.0516167%2056.9155C-0.0652348%2019.1138%2033.3817%20-7.09077%2080.5165%202.38723Z%22%20fill%3D%22%23FF87DD%22%2F%3E%0A%3C%2Fsvg%3E');
+    //background-color: $btn_bg_color_hover;
+  }
+  &:active {
+    color: $font_color2 !important;
+    background-image: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20758%20158%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M80.5165%202.38723C287.348%2043.9775%20473.659%20-5.08215%20668.831%2025.3382C709.829%2031.7239%20757.593%2057.9119%20757.593%2096.78C757.615%2097.05%20757.637%2097.3201%20757.554%2097.5963C757.198%20128.28%20709.681%20143.189%20668.645%20140.243C464.616%20124.087%20243.641%20186.674%2075.1755%20139.554C41.1879%20127.332%200.143938%2095.7135%200.0270863%2057.9119C-0.0021447%2057.5518%20-0.0240735%2057.2817%200.0516167%2056.9155C-0.0652348%2019.1138%2033.3817%20-7.09077%2080.5165%202.38723Z%22%20fill%3D%22%23FF61D3%22%2F%3E%0A%3C%2Fsvg%3E');
+    //background-color: $btn_bg_color_active !important;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  @media (min-width: 992px) {
+    width: auto;
+    height: 157px;
+    font-size: 25px;
+    padding: 20px 15px;
+  }
+
+  .btn__icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+  }
+
+  .btn__icon_p {
+    fill: $font_color;
+  }
+
+  &.btn_1 { //index
+    display: block;
+    width: 100%;
+    height: 69px;
+    font-size: 18px;
+    padding: 14px 10px;
+    @media (min-width: 992px) {}
+    @media (min-width: 1200px) {
+      font-size: 40px;
+      height: 173px;
+    }
+    @media (min-width: 1400px) {
+      font-size: 40px;
+      height: 173px;
+    }
+    @media (min-width: 1650px) {}
+    @media (min-width: 1920px) {}
+  }
+
+  &.btn-login {
+    height: 60px;
+    font-size: 18px;
+    padding: 20px 10px;
+    @media (min-width: 992px) {
+      height: 60px;
+      padding: 20px 10px;
+    }
+    @media (min-width: 1200px) {
+      width: auto;
+      height: 114px;
+      font-size: 26px;
+      padding: 40px 15px;
+    }
+    @media (min-width: 1400px) {
+      height: 114px;
+      font-size: 26px;
+      padding: 40px 15px;
+    }
+  }
+
+  &.btn_2 { //user list
+    width: 100%;
+    height: 44px;
+    font-size: 11px;
+    padding: 18px 10px;
+    @media (min-width: $user_list_item_breakpoint) {
+      height: 93px;
+      font-size: 26px;
+      padding: 34px 15px;
+    }
+  }
+
+  &.btn_3 { //change photo
+    width: 278px;
+    height: 51px;
+    padding: 5px 5px;
+    border-radius: 0;
+    font-family: $font_family;
+    font-weight: 400;
+    font-size: 14px;
+    border: 1px solid $font_color !important;
+    background-color: $font_color2;
+    background-image: none;
+    color: $font_color;
+    text-transform: uppercase;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      color: $font_color;
+      background-color: $btn_bg_color_hover;
+    }
+    &:active {
+      color: $font_color !important;
+      background-color: $btn_bg_color_active !important;
+    }
+    @media (min-width: 992px) {}
+    @media (min-width: 1200px) {
+      font-size: 25px;
+      padding: 15px 15px;
+      width: 353px;
+      height: 80px;
+    }
+  }
+
+  &.btn_4 { //signout
+    height: 60px;
+    padding: 22px 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    background-color: $bg_light_2;
+    color: $font_color;
+    border: none;
+    &:hover {
+      background-color: $btn_bg_color_hover;
+      color: $font_color2;
+    }
+    @media (min-width: 992px) {}
+    @media (min-width: 1200px) {
+      font-size: 24px;
+      padding: 21px 15px;
+      width: 280px;
+      height: 66px;
+    }
+  }
+
+  &.btn_w100 {
+    width: 100%;
+  }
+}

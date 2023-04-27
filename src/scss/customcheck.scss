@@ -1,0 +1,254 @@
+//checkbox
+$cc_font_color: $font_color;
+$cc_font_size_mob: 14px;
+$cc_font_size: 25px;
+
+$cc_icon_color: $body_bg_color;
+$cc_icon_width_mob: 20px;
+$cc_icon_height_mob: 20px;
+$cc_icon_width: 30px;
+$cc_icon_height: 30px;
+$cc_icon_right_mob: 15px;
+$cc_icon_right: 19px;
+$cc_icon_bradius: 0;
+$cc_icon_border: 1px solid $font_color;
+
+$cc_mark_color: $btn_bg_color;
+$cc_mark_width_mob: 20px;
+$cc_mark_height_mob: 20px;
+$cc_mark_width: 30px;
+$cc_mark_height: 30px;
+$cc_mark_bradius: 0;
+
+//switcher
+$cs_font_color: $font_color;
+$cs_font_size_mob: 13px;
+$cs_line_height_mob: 24px;
+$cs_font_size: 17px;
+$cs_line_height: 30px;
+
+$cs_icon_width_mob: 50px;
+$cs_icon_height_mob: 20px;
+$cs_icon_width: 90px;
+$cs_icon_height: 30px;
+$cs_icon_right_mob: 20px;
+$cs_icon_right: 30px;
+$cs_icon_color: $body_bg_color;
+$cs_icon_border: 1px solid $font_color;
+$cs_icon_bradius: 0;
+
+$cs_mark_width_mob: 20px;
+$cs_mark_height_mob: 20px;
+$cs_mark_width: 40px;
+$cs_mark_height: 30px;
+$cs_mark_border: 1px solid $font_color;
+$cs_mark_bradius: 0;
+
+$cs_mark_color_off: $body_bg_color;
+$cs_mark_color_on: $btn_bg_color;
+
+//switcher inline
+$csi_font_size_mob: 13px;
+$csi_font_size: 25px;
+$csi_icon_right_mob: 20px;
+$csi_icon_right: 37px;
+
+.customcheck {
+  display: block;
+  margin-bottom: 10px;
+
+  .customcheck__label {
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 0;
+    color: $cc_font_color;
+    font-size: $cc_font_size_mob;
+    @media (min-width: 992px) {
+      font-size: $cc_font_size;
+    }
+    &:hover {
+      background-color: inherit;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .customcheck__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: $cc_icon_height_mob;
+      width: $cc_icon_width_mob;
+      min-width: $cc_icon_width_mob;
+      border: $cc_icon_border;
+      border-radius: $cc_icon_bradius;
+      background-color: $cc_icon_color;
+      margin-right: $cc_icon_right_mob;
+      @media (min-width: 992px) {
+        height: $cc_icon_height;
+        width: $cc_icon_width;
+        min-width: $cc_icon_width;
+        margin-right: $cc_icon_right;
+      }
+
+      .customcheck__mark {
+        display: block;
+        width: $cc_mark_width_mob;
+        height: $cc_mark_height_mob;
+        border-radius: $cc_mark_bradius;
+        background-color: transparent;
+        transition: transform .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        @media (min-width: 992px) {
+          width: $cc_mark_width;
+          height: $cc_mark_height;
+        }
+      }
+    }
+    .customcheck__txt {
+      color: $cc_font_color;
+    }
+  }
+
+  .customcheck__input {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    pointer-events: none;
+    &:checked + .customcheck__label {
+      .customcheck__icon {
+        .customcheck__mark {
+          background-color: $cc_mark_color;
+        }
+      }
+      .customcheck__txt {
+        color: $cc_font_color;
+      }
+    }
+  }
+
+}
+
+.customcheck_radio {
+  .customcheck__label {
+    text-transform: uppercase;
+  }
+}
+
+.customcheck_radio-inline {
+  margin: 0;
+  + .customcheck_radio-inline {
+    margin: 0 0 0 34px;
+    @media (min-width: 992px) {
+      margin: 0 0 0 90px;
+    }
+  }
+}
+
+.customcheck_switch {
+  & + .customcheck_switch {
+    margin-top: 34px;
+    @media (min-width: 992px) {
+      margin-top: 47px;
+    }
+  }
+  .customcheck__label {
+    align-items: flex-start;
+    font-weight: 300;
+    line-height: $cs_line_height_mob;
+    font-size: $cs_font_size_mob;
+    //flex-direction: column;
+    @media (min-width: 992px) {
+      //flex-direction: row;
+      line-height: $cs_line_height;
+      font-size: $cs_font_size;
+    }
+    .customcheck__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: $cs_icon_height_mob;
+      width: $cs_icon_width_mob;
+      min-width: $cs_icon_width_mob;
+      border: $cs_icon_border;
+      border-radius: $cs_icon_bradius;
+      background-color: transparent;
+      margin: $cs_mark_height_mob/4 $cs_icon_right_mob $cs_mark_height_mob/4 0;
+      //margin: $cs_mark_height_mob/4 auto $cs_icon_right_mob;
+      background-color: $cs_icon_color;
+      //overflow: hidden;
+      @media (min-width: 992px) {
+        height: $cs_icon_height;
+        width: $cs_icon_width;
+        min-width: $cs_icon_width;
+        margin: $cs_mark_height/4 $cs_icon_right $cs_mark_height/4 0;
+      }
+
+      .customcheck__mark {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $cs_mark_width_mob;
+        height: $cs_mark_height_mob;
+        background-color: $cs_mark_color_off;
+        transform: translateX(-15px);
+        border-radius: $cs_mark_bradius;
+        border: $cs_mark_border;
+        @media (min-width: 992px) {
+          width: $cs_mark_width;
+          height: $cs_mark_height;
+          transform: translateX(-25px);
+        }
+      }
+    }
+    .customcheck__txt {
+      //padding-top: 3px;
+      @media (min-width: 992px) {
+        //padding-top: 8px;
+      }
+    }
+  }
+
+  .customcheck__input {
+    &:checked + .customcheck__label {
+      .customcheck__icon {
+        border: $cs_icon_border;
+        .customcheck__mark {
+          background-color: $cs_mark_color_on;
+          transform: translateX(15px);
+          @media (min-width: 992px) {
+            transform: translateX(26px);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.customcheck_switch-inline {
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  .customcheck__label {
+    font-weight: 400;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+    line-height: 24px;
+    font-size: $csi_font_size_mob;
+    @media (min-width: 992px) {
+      font-size: $csi_font_size;
+    }
+
+    .customcheck__icon {
+      transform: rotate(0deg);
+      //margin: $cs_mark_height_mob/4 auto $csi_icon_right_mob;
+      margin: $cs_mark_height_mob/4 $csi_icon_right_mob $cs_mark_height_mob/4 0;
+      @media (min-width: 992px) {
+        margin: $cs_mark_height/4 $csi_icon_right $cs_mark_height/4 0;
+      }
+    }
+  }
+}

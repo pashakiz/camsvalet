@@ -1,0 +1,70 @@
+<%= _.template(require('./../includes/header.html'))() %>
+  <script>
+    document.body.classList.add('bg-color-profile');
+  </script>
+  <main class="main">
+    <div class="container container_profile">
+      <div class="container__inner">
+        <div class="userprofile">
+          <div class="userprofile__photo">
+            <div class="splide splide_up" aria-label="Profile photos">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <div class="userprofile__img" style="background-image: url('assets/img/photos/ava.jpg');"></div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="userprofile__img" style="background-image: url('assets/img/photos/ava.jpg');"></div>
+                  </li>
+                  <li class="splide__slide">
+                    <div class="userprofile__img" style="background-image: url('assets/img/photos/ava.jpg');"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a class="btn btn_w100 userprofile__btn d-xl-none" href="#">Claim Her</a>
+          </div>
+          <div class="userprofile__info">
+            <div class="userprofile__data">
+              <div class="userprofile__row">
+                <div class="userprofile__name">Anna 29</div>
+                <div class="userprofile__loc">Sidney ~ 100000km</div>
+              </div>
+              <div class="compatibility d-flex justify-content-between align-items-center">
+                <div class="compatibility__chart">
+                  <div class="compatibility__title">Matches</div>
+                  <div class="compatibility__progress progress">
+                    <div class="progress-item filled"></div>
+                    <div class="progress-item filled"></div>
+                    <div class="progress-item filled"></div>
+                  </div>
+                </div>
+                <div class="compatibility__chart">
+                  <div class="compatibility__title">Location</div>
+                  <div class="compatibility__progress progress">
+                    <div class="progress-item filled"></div>
+                    <div class="progress-item filled"></div>
+                    <div class="progress-item"></div>
+                  </div>
+                </div>
+                <div class="compatibility__chart">
+                  <div class="compatibility__title">Interests</div>
+                  <div class="compatibility__progress progress">
+                    <div class="progress-item filled"></div>
+                    <div class="progress-item"></div>
+                    <div class="progress-item"></div>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn_w100 userprofile__btn d-none d-xl-block" href="#">Claim Her</a>
+            </div>
+            <div class="user-profile-about">
+              <div class="user-profile-title user-profile-title_about">About girl</div>
+              <p>We have created a unique combination system that consists of three main factors that produce similarity of thought and productive connections: Life, freedom and culture. NF, in an abbreviated form, connects people who have interests in similar activities, passions and future aspirations. We also add our own personal touch to the online dating process ensuring that your experience is special and exclusive to you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+<%= _.template(require('./../includes/footer.html'))() %>

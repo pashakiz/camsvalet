@@ -1,0 +1,201 @@
+$ulist-img-width: 180px;
+$ulist-img-height: 180px;
+$ulist-img-width-lg: 370px;
+$ulist-img-height-lg: 470px;
+
+//.user-list-wrap {}
+
+.user-list-extra-wrap {
+  padding: 53px 0 0;
+  @media (min-width: 1200px) {
+    padding: 183px 0 0;
+  }
+}
+
+.user-list-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 180px;
+  height: 310px;
+  @media (min-width: $user_list_item_breakpoint) {
+    width: 370px;
+    height: 630px;
+  }
+
+  .user-list-item__photo {
+    width: $ulist-img-width;
+    max-width: $ulist-img-width;
+    min-width: $ulist-img-width;
+    height: $ulist-img-height;
+    max-height: $ulist-img-height;
+    @media (min-width: $user_list_item_breakpoint) {
+      width: $ulist-img-width-lg;
+      max-width: $ulist-img-width-lg;
+      min-width: $ulist-img-width-lg;
+      height: $ulist-img-height-lg;
+      max-height: $ulist-img-height-lg;
+    }
+
+    .user-list-item__img {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: cover;
+      width: $ulist-img-width;
+      max-width: $ulist-img-width;
+      height: $ulist-img-height;
+      max-height: $ulist-img-height;
+      border-radius: 0;
+      position: relative;
+      z-index: 0;
+      @media (min-width: 400px) {
+        height: $ulist-img-height;
+        max-height: $ulist-img-height;
+      }
+      @media (min-width: $user_list_item_breakpoint) {
+        width: $ulist-img-width-lg;
+        max-width: $ulist-img-width-lg;
+        height: $ulist-img-height-lg;
+        max-height: $ulist-img-height-lg;
+      }
+    }
+
+  }
+
+  .user-list-item__btn {
+    margin: 18px 0 0 0;
+    @media (min-width: $user_list_item_breakpoint) {
+      margin: 27px 0 0 0;
+    }
+  }
+
+  .user-list-item__inf {
+    width: 100%;
+    background-color: $body_bg_color;
+    border-radius: 0 35px 0 0;
+    padding: 0 0 25px;
+    transform: translateY(-24px);
+    @media (min-width: $user_list_item_breakpoint) {
+      transform: translateY(-127px);
+      border-radius: 0 134px 0 0;
+      padding: 0 0 60px;
+    }
+  }
+
+  .user-list-item__data {
+    padding: 14px 9px 0;
+    @media (min-width: $user_list_item_breakpoint) {
+      padding: 30px 20px 0;
+    }
+  }
+
+  .user-list-item__row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: $font_color;
+    padding: 0 0 11px;
+    @media (min-width: $user_list_item_breakpoint) {
+      padding: 0 0 18px;
+    }
+
+    .user-list-item__name {
+      font-family: $font_family;
+      font-weight: 400;
+      line-height: 1;
+      font-size: 14px;
+      margin-bottom: 11px;
+      text-transform: uppercase;
+      @include overflow-ellipsis;
+      @media (min-width: $user_list_item_breakpoint) {
+        font-size: 25px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .user-list-item__loc {
+      font-family: $font_family;
+      font-weight: 300;
+      line-height: 1;
+      font-size: 9px;
+      @include overflow-ellipsis;
+      @media (min-width: $user_list_item_breakpoint) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .compatibility-title { //Compability score
+    font-family: $font_family;
+    color: $font_color;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    @include overflow-ellipsis;
+    @media (min-width: $user_list_item_breakpoint) {
+      font-size: 16px;
+      margin-bottom: 22px;
+    }
+  }
+
+  .user-list-item__icon {
+    font-family: $font_family2;
+    font-weight: 400;
+    font-size: 14px;
+    color: $font_color;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 5;
+    @media (min-width: $user_list_item_breakpoint) {
+      font-size: 32px;
+    }
+  }
+
+  // &.user-list-item_extra {
+  //   .user-list-item__photo {}
+  //   .user-list-item__img {}
+  //   .user-list-item__row {}
+  //   .user-list-item__inf {}
+  //   .user-list-item__data {}
+  //   .user-list-item__name {}
+  //   .user-list-item__btn {}
+  // }
+
+}
+
+.user-list-extra-bar {
+  background-color: $bg_light_1;
+  height: 280px;
+  margin-bottom: -249px;
+  @media (min-width: $user_list_item_breakpoint) {
+    height: 394px;
+    margin-bottom: -343px;
+  }
+}
+
+.user-list-title {
+  font-family: $font_family2;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 27px;
+  color: $user_list_title_color;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  @media (min-width: $user_list_item_breakpoint) {
+    font-size: 36px;
+    line-height: 67px;
+  }
+  @media (min-width: 1200px) {
+    text-align: left;
+    font-size: 29px;
+    line-height: 50px;
+    margin-bottom: 0;
+  }
+  @media (min-width: 1400px) {
+    font-size: 36px;
+    line-height: 67px;
+  }
+}
