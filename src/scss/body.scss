@@ -4,20 +4,10 @@ body {
   font-size: $font_size_mobile;
   color: $font_color;
   line-height: 1.5;
+  overflow-x: hidden;
   background: $body_bg_color;
-  background-image: url('../img/bg/bgm.svg');
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: 100% 115px;
   @media (min-width: 992px) {
     font-size: $font_size;
-  }
-  @media (min-width: 1200px) {
-    background-image: url('../img/bg/bgd.svg');
-    background-size: 1920px 1087px;
-  }
-  @media (min-width: 1920px) {
-    background-size: 100% 1087px;
   }
 
   &.bg-color-profile {
