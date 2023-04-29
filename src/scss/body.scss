@@ -128,7 +128,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: $body_bg_color;
+  background: $bg_dark_1;
   z-index: 999;
   transition: 0.5s all;
   opacity: 1;
@@ -136,7 +136,7 @@ body {
   .loader {
     width: 75px;
     height: 75px;
-    background-image: url('../img/icons/logo.svg');
+    background-image: url('../img/icons/favicon.svg');
     position: absolute;
     top: 50%;
     left: 50%;

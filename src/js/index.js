@@ -1,11 +1,7 @@
-import * as Timer from './countdown.js';
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css/core';
 //import '@splidejs/splide/css';
 import '@scss/main.scss'
-
-//init countdown.js
-document.addEventListener('DOMContentLoaded', Timer.initCountDown);
 
 //preloader
 const preloader = () => {
@@ -18,6 +14,23 @@ const preloader = () => {
   }, 1000);
 }
 document.addEventListener('DOMContentLoaded', preloader, false);
+
+//expand more tags
+const btnShowMoreTags = document.querySelector('.show-more-tags');
+const tagList = document.querySelector('.search-widget .tags .tag-list');
+const showMoreTags = (e) => {
+  if (e.target.closest('.show-more-tags') === null)
+    return false
+  const icon = e.target.closest('.show-more-tags').querySelector('svg path');
+  if (tagList.classList.contains('open')) {
+    tagList.classList.remove('open');
+    icon.setAttribute('d', 'M4.53,10.357v-10h1.7v10ZM.377,6.206v-1.7h10V6.2h-10Z'); //plus
+    return false
+  }
+  tagList.classList.add('open');
+  icon.setAttribute('d', 'M0 5.76V4.24h10v1.52H0Z'); //minus
+}
+btnShowMoreTags.addEventListener('click', showMoreTags, false);
 
 //upload photo
 const uploadPhotoInput = document.querySelector('.custom-file-input');
