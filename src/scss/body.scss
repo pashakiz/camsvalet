@@ -6,8 +6,12 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   background: $body_bg_color;
+  padding-top: 160px;
   @media (min-width: 992px) {
     font-size: $font_size;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 0;
   }
 
   &.bg-color-profile {

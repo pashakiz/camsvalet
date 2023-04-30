@@ -15,6 +15,40 @@ const preloader = () => {
 }
 document.addEventListener('DOMContentLoaded', preloader, false);
 
+//expand mobile menu
+const btnShowMenu = document.querySelector('.show-menu');
+const mobMenu = document.querySelector('.header__top');
+const showMobMenu = (e) => {
+  if (e.target.closest('.show-menu') === null)
+    return false
+  console.log('showMobMenu');
+  const iconMenu = document.querySelector('.show-menu__icon-menu');
+  const iconClose = document.querySelector('.show-menu__icon-close');
+  if (mobMenu.classList.contains('open')) {
+    mobMenu.classList.remove('open');
+    iconMenu.style.display = 'block';
+    iconClose.style.display = 'none';
+    return false
+  }
+  mobMenu.classList.add('open');
+  iconMenu.style.display = 'none';
+  iconClose.style.display = 'block';
+}
+btnShowMenu.addEventListener('click', showMobMenu, false);
+
+//expand mobile filter
+const btnShowFilter = document.querySelector('.show-filter');
+//const mobFilter = document.querySelector(''); /* !!! */
+const showMobFilter = (e) => {
+  if (e.target.closest('.show-filter') === null)
+    return false
+  console.log('showMobFilter');
+  const iconFilter = document.querySelector('.show-filter__icon-filter');
+  const iconClose = document.querySelector('.show-filter__icon-close');
+  //
+}
+btnShowFilter.addEventListener('click', showMobFilter, false);
+
 //expand more tags
 const btnShowMoreTags = document.querySelector('.show-more-tags');
 const tagList = document.querySelector('.search-widget .tags .tag-list');
