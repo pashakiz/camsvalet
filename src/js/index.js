@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', preloader, false);
 
 //expand mobile menu
 const btnShowMenu = document.querySelector('.show-menu');
-const mobMenu = document.querySelector('.header__top');
+const mobMenu = document.querySelector('.header__links');
+const bgOverlay = document.querySelector('.bg-overlay');
 const showMobMenu = (e) => {
   if (e.target.closest('.show-menu') === null)
     return false
@@ -28,11 +29,13 @@ const showMobMenu = (e) => {
     mobMenu.classList.remove('open');
     iconMenu.style.display = 'block';
     iconClose.style.display = 'none';
+    bgOverlay.style.display = 'none';
     return false
   }
   mobMenu.classList.add('open');
   iconMenu.style.display = 'none';
   iconClose.style.display = 'block';
+  bgOverlay.style.display = 'block';
 }
 btnShowMenu.addEventListener('click', showMobMenu, false);
 
@@ -51,7 +54,8 @@ btnShowFilter.addEventListener('click', showMobFilter, false);
 
 //expand more tags
 const btnShowMoreTags = document.querySelector('.show-more-tags');
-const tagList = document.querySelector('.search-widget .tags .tag-list');
+const searchWidget = document.querySelector('.search-widget');
+const tagList = searchWidget.querySelector('.tags .tag-list');
 const showMoreTags = (e) => {
   if (e.target.closest('.show-more-tags') === null)
     return false
@@ -65,6 +69,18 @@ const showMoreTags = (e) => {
   icon.setAttribute('d', 'M0 5.76V4.24h10v1.52H0Z'); //minus
 }
 btnShowMoreTags.addEventListener('click', showMoreTags, false);
+
+//stick SearchWidget
+let scrolltop = window.pageYOffset;
+const stickSearchWidget = (e) => {
+  if (window.pageYOffset > scrolltop && scrolltop >= 150) {
+    searchWidget.classList.add('hide');
+  } else {
+    searchWidget.classList.remove('hide');
+  }
+  scrolltop = window.pageYOffset;
+}
+window.addEventListener('scroll', stickSearchWidget, false);
 
 //upload photo
 const uploadPhotoInput = document.querySelector('.custom-file-input');

@@ -1,6 +1,26 @@
-//.header {}
+.header {
+  @media (min-width: 1200px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+}
 
-.header__top {
+.bg-overlay {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#000, 0.6);
+  transition: all .2s ease-in-out;
+  z-index: 1;
+}
+
+.header__links {
   position: fixed;
   top: 60px;
   display: flex;
@@ -38,9 +58,21 @@
   background-color: $bg_dark_2;
   height: 60px;
   padding: 0 20px;
+  &::before {
+    content: '';
+    background-color: $bg_dark_2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
   @media (min-width: 1200px) {
     position: static;
     height: 95px;
+    &::before {
+      content: none;
+    }
   }
 }
 
@@ -49,6 +81,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  @media (min-width: 1200px) {
+    position: static;
+  }
 }
 
 .show-menu {
@@ -123,7 +159,7 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
-  padding: 20px 20px;
+  padding: 40px 20px;
   @media (min-width: 1200px) {
     padding: 0;
     flex-direction: row;
@@ -134,10 +170,9 @@
     position: relative;
     list-style-type: none;
     + li {
-      margin-top: 15px;
+      margin: 30px 0 0 0;
       @media (min-width: 1200px) {
-        margin-top: 0;
-        margin-left: 15px;
+        margin: 0 0 0 15px;
         &::before {
           content: '';
           display: block;
@@ -153,37 +188,63 @@
   }
 
   .ht-link__icon {
-    color: $font_color;
+    color: $btn_bg_color;
     height: 16px;
-    margin-left: 5px;
+    margin: 0 10px 0 0;
     transition: all .1s ease-in-out;
     &.ht-link__icon_live {
-      width: 15px;
-      height: 15px;
+      width: 20px;
+      height: 20px;
+      @media (min-width: 1200px) {
+        width: 15px;
+        height: 15px;
+      }
     }
     &.ht-link__icon_best {
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       transform: translateY(-1px);
+      @media (min-width: 1200px) {
+        width: 16px;
+        height: 16px;
+        transform: translateY(-1px);
+      }
     }
     &.ht-link__icon_hot {
-      width: 12px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
+      @media (min-width: 1200px) {
+        width: 12px;
+        height: 16px;
+      }
     }
     &.ht-link__icon_random {
-      width: 15px;
-      height: 12px;
+      width: 20px;
+      height: 20px;
+      @media (min-width: 1200px) {
+        width: 15px;
+        height: 12px;
+      }
     }
     &.ht-link__icon_reviews {
-      width: 15px;
-      height: 15px;
+      width: 20px;
+      height: 20px;
+      @media (min-width: 1200px) {
+        width: 15px;
+        height: 15px;
+      }
     }
     &.ht-link__icon_premium {
-      width: 15px;
-      height: 15px;
+      width: 20px;
+      height: 20px;
+      @media (min-width: 1200px) {
+        width: 15px;
+        height: 15px;
+      }
     }
     @media (min-width: 1200px) {
       color: $btn_bg_color;
+      margin: 0 0 0 5px;
     }
   }
 
@@ -193,7 +254,7 @@
     justify-content: flex-start;
     font-family: $font_family2;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1;
     text-transform: uppercase;
     color: $font_color;
@@ -222,7 +283,7 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 20px 20px;
+  padding: 60px 40px;
   @media (min-width: 1200px) {
     padding: 0;
   }
@@ -233,7 +294,10 @@
   align-items: center;
   justify-content: center;
   transition: color .1s ease-in-out;
-  height: 19px;
+  height: 30px;
+  @media (min-width: 1250px) {
+    height: 19px;
+  }
   + .slink {
     margin-left: 23px;
   }
@@ -258,16 +322,28 @@
     opacity: 0.8;
   }
   &.slink__icon_in {
-    width: 18px;
-    height: 18px;
+    width: 30px;
+    height: 30px;
+    @media (min-width: 1250px) {
+      width: 18px;
+      height: 18px;
+    }
   }
   &.slink__icon_fb {
-    width: 9px;
-    height: 18px;
+    width: 14px;
+    height: 30px;
+    @media (min-width: 1250px) {
+      width: 9px;
+      height: 18px;
+    }
   }
   &.slink__icon_tw {
-    width: 20px;
-    height: 16px;
+    width: 30px;
+    height: 30px;
+    @media (min-width: 1250px) {
+      width: 20px;
+      height: 16px;
+    }
   }
   @media (min-width: 1200px) {
     color: $btn_bg_color;
@@ -282,12 +358,22 @@
   background-color: $bg_light_3;
   height: 100px;
   padding: 13px 20px 15px;
+  transition: transform, 0.5s ease-in-out;
+  transform: translateY(0px);
+  z-index: -1;
+  &.hide {
+    transform: translateY(calc(-100% - 60px));
+  }
   @media (min-width: 1200px) {
+    z-index: 0;
     position: static;
     height: auto;
     background-color: transparent;
     max-width: 476px;
     transform: translateY(-11px);
+    &.hide {
+      transform: translateY(-11px);
+    }
   }
 }
 
