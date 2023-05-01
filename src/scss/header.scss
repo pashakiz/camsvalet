@@ -363,9 +363,13 @@
   overflow: hidden;
   max-height: 30px;
   transition: all 0.2s ease-in-out;
+  &::after {
+    content: '';
+    flex-grow: 1000000000;
+  }
   &.open {
     background-color: $bg_light_2;
-    max-height: 500px;
+    max-height: 300px;
   }
 }
 
