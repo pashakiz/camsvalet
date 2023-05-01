@@ -59,6 +59,7 @@ btnShowMenu.addEventListener('click', toggleMobMenu, false);
 
 const hideMobFilter = () => {
   mobFilter.classList.remove('open-mob');
+  mobFilter.classList.remove('open');
   iconFilter.style.display = 'block';
   iconCloseFilter.style.display = 'none';
   bgOverlay.style.display = 'none';
@@ -73,7 +74,7 @@ const showMobFilter = () => {
 const toggleMobFilter = (e) => {
   if (e.target.closest('.show-filter') === null)
     return false
-  console.log('showMobFilter');
+
   if (mobFilter.classList.contains('open-mob')) {
     hideMobFilter();
     return false
@@ -83,6 +84,15 @@ const toggleMobFilter = (e) => {
 }
 
 btnShowFilter.addEventListener('click', toggleMobFilter, false);
+
+const hideAllMenu = (e) => {
+  if (e.target.closest('.bg-overlay') === null)
+    return false
+  hideMobMenu();
+  hideMobFilter();
+}
+
+bgOverlay.addEventListener('click', hideAllMenu, false);
 
 //expand more tags
 const btnShowMoreTags = document.querySelector('.show-more-tags');
@@ -124,6 +134,7 @@ const toggleSidebar = (e) => {
 
   if (sidebar.classList.contains('open')) {
     sidebar.classList.remove('open');
+    sidebar.classList.remove('open-mob');
     content.classList.remove('open');
     btnToggleSidebar.classList.add('right');
     return false
