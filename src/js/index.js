@@ -19,38 +19,70 @@ document.addEventListener('DOMContentLoaded', preloader, false);
 const btnShowMenu = document.querySelector('.show-menu');
 const mobMenu = document.querySelector('.header__links');
 const bgOverlay = document.querySelector('.bg-overlay');
-const showMobMenu = (e) => {
-  if (e.target.closest('.show-menu') === null)
-    return false
-  console.log('showMobMenu');
-  const iconMenu = document.querySelector('.show-menu__icon-menu');
-  const iconClose = document.querySelector('.show-menu__icon-close');
-  if (mobMenu.classList.contains('open')) {
-    mobMenu.classList.remove('open');
-    iconMenu.style.display = 'block';
-    iconClose.style.display = 'none';
-    bgOverlay.style.display = 'none';
-    return false
-  }
+const iconMenu = document.querySelector('.show-menu__icon-menu');
+const iconCloseMenu = document.querySelector('.show-menu__icon-close');
+
+const btnShowFilter = document.querySelector('.show-filter');
+const mobFilter = document.querySelector('.sidebar-filter');
+const iconFilter = document.querySelector('.show-filter__icon-filter');
+const iconCloseFilter = document.querySelector('.show-filter__icon-close');
+
+const hideMobMenu = () => {
+  mobMenu.classList.remove('open');
+  iconMenu.style.display = 'block';
+  iconCloseMenu.style.display = 'none';
+  bgOverlay.style.display = 'none';
+}
+
+const showMobMenu = () => {
   mobMenu.classList.add('open');
   iconMenu.style.display = 'none';
-  iconClose.style.display = 'block';
+  iconCloseMenu.style.display = 'block';
   bgOverlay.style.display = 'block';
 }
-btnShowMenu.addEventListener('click', showMobMenu, false);
+
+const toggleMobMenu = (e) => {
+  if (e.target.closest('.show-menu') === null)
+    return false
+
+  if (mobMenu.classList.contains('open')) {
+    hideMobMenu();
+    return false
+  }
+  hideMobFilter();
+  showMobMenu();
+}
+
+btnShowMenu.addEventListener('click', toggleMobMenu, false);
 
 //expand mobile filter
-const btnShowFilter = document.querySelector('.show-filter');
-//const mobFilter = document.querySelector(''); /* !!! */
-const showMobFilter = (e) => {
+
+const hideMobFilter = () => {
+  mobFilter.classList.remove('open-mob');
+  iconFilter.style.display = 'block';
+  iconCloseFilter.style.display = 'none';
+  bgOverlay.style.display = 'none';
+}
+const showMobFilter = () => {
+  mobFilter.classList.add('open-mob');
+  iconFilter.style.display = 'none';
+  iconCloseFilter.style.display = 'block';
+  bgOverlay.style.display = 'block';
+}
+
+const toggleMobFilter = (e) => {
   if (e.target.closest('.show-filter') === null)
     return false
   console.log('showMobFilter');
-  const iconFilter = document.querySelector('.show-filter__icon-filter');
-  const iconClose = document.querySelector('.show-filter__icon-close');
-  //
+  if (mobFilter.classList.contains('open-mob')) {
+    hideMobFilter();
+    return false
+  }
+  hideMobMenu();
+  showMobFilter();
 }
-btnShowFilter.addEventListener('click', showMobFilter, false);
+
+btnShowFilter.addEventListener('click', toggleMobFilter, false);
 
 //expand more tags
 const btnShowMoreTags = document.querySelector('.show-more-tags');
@@ -81,6 +113,27 @@ const stickSearchWidget = (e) => {
   scrolltop = window.pageYOffset;
 }
 window.addEventListener('scroll', stickSearchWidget, false);
+
+//expand sidebar (Desktop)
+const btnToggleSidebar = document.querySelector('.btn-toggle-sidebar');
+const sidebar = document.querySelector('.sidebar-filter');
+const content = document.querySelector('.content');
+const toggleSidebar = (e) => {
+  if (e.target.closest('.btn-toggle-sidebar') === null)
+    return false
+
+  if (sidebar.classList.contains('open')) {
+    sidebar.classList.remove('open');
+    content.classList.remove('open');
+    btnToggleSidebar.classList.add('right');
+    return false
+  }
+
+  sidebar.classList.add('open');
+  content.classList.add('open');
+  btnToggleSidebar.classList.remove('right');
+}
+btnToggleSidebar.addEventListener('click', toggleSidebar, false);
 
 //upload photo
 const uploadPhotoInput = document.querySelector('.custom-file-input');
