@@ -1,0 +1,35 @@
+.tags-area {
+  padding: 57px 20px 63px;
+  @media (min-width: 1200px) {
+    padding: 85px 95px 63px;
+  }
+}
+
+.tags-area__list {
+  font-size: 0;
+  font-size: 1px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  li {
+    width: 49%;
+    display: inline-block;
+    list-style-type: none;
+    @media (min-width: 768px) {
+      width: 33%;
+    }
+    @media (min-width: 1200px) {
+      width: 33%;
+    }
+    @media (min-width: 1280px) {
+      width: 24%;
+    }
+  }
+}
+.tags-area__link {
+  font-family: $font_family2;
+  font-weight: 400;
+  color: $font_color2;
+  font-size: 14px;
+  line-height: 31px;
+}
