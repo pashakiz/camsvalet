@@ -146,6 +146,24 @@ const toggleSidebar = (e) => {
 }
 btnToggleSidebar.addEventListener('click', toggleSidebar, false);
 
+const filterRows = document.querySelectorAll('.filter');
+const expandFilterRow = (e) => {
+  if (e.target.closest('.filter') === null)
+    return false
+  let thisFilter = e.target.closest('.filter');
+  let filterHeader = thisFilter.querySelector('.collapse-header');
+  let filterBody = thisFilter.querySelector('.collapse-body');
+  console.log('thisFilter', thisFilter);
+  if (filterHeader.classList.contains('open') && filterBody.classList.contains('open')) {
+    filterHeader.classList.remove('open');
+    filterBody.classList.remove('open');
+    return false
+  }
+  filterHeader.classList.add('open');
+  filterBody.classList.add('open');
+}
+filterRows.forEach(filterRow => filterRow.addEventListener('click', expandFilterRow, false));
+
 //upload photo
 const uploadPhotoInput = document.querySelector('.custom-file-input');
 const profilePhoto = document.querySelector('.settings-photo .profile-photo');

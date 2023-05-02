@@ -43,7 +43,7 @@
   width: $mobMenu-width;
   height: calc(100vh - 60px);
   transform: translateX(100%);
-  background-color: red;
+  background-color: $body_bg_color;
   z-index: 10;
   transition: all .2s ease-in-out;
   &.open-mob {
@@ -54,12 +54,184 @@
     left: 0;
     right: auto;
     width: $sidebar-width;
-    height: calc(100% - 0px);
+    height: calc(100vh - 131px);
     transform: translateX(-100%);
     transition: transform 0.5s ease-in-out;
-    background-color: red;
     &.open {
       transform: translateX(0);
     }
   }
+}
+
+.filters {
+  height: calc(100% - 86px);
+  overflow-y: auto;
+}
+
+.camstotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px 0;
+  font-family: $font_family2;
+  font-weight: 400;
+  font-size: 12px;
+}
+.camstotal__label {
+  color: $font_color2;
+  text-transform: uppercase;
+}
+.camstotal__value {
+  color: $btn_bg_color;
+}
+
+.collapsible-filters {
+  padding: 0;
+  margin: 18px 0 20px;
+}
+
+.filter {
+  list-style-type: none;
+}
+
+.collapse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $font_family2;
+  font-weight: 400;
+  font-size: 12px;
+  color: $font_color2;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0 24px 0 20px;
+  margin: 10px 0 0;
+  &.open {
+    .collapse-header__icon {
+      transform: rotate(90deg);
+      transition: transform 0.3s linear;
+    }
+  }
+}
+
+.collapse-header__icon {
+  width: 11px;
+  height: 11px;
+  transition: transform 0.3s linear;
+}
+
+.collapse-body {
+  overflow: hidden;
+  padding-top: 9px;
+  &:not(.open) {
+    .choice {
+      &.unselected {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        transition: padding 0.3s linear, height 0.3s linear, opacity 0.3s linear;
+      }
+    }
+  }
+}
+
+.choice {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $font_family2;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  color: $font_color2;
+  padding: 8px 20px 8px 29px;
+  text-transform: capitalize;
+  opacity: 1;
+  transition: padding 0.3s linear, height 0.3s linear, opacity 0.3s linear;
+  &:hover {
+    background-color: $btn_bg_color;
+    color: $font_color3;
+    .camsite-logo_default {
+      display: none;
+    }
+    .camsite-logo_white {
+      display: block;
+    }
+  }
+  &.selected {
+    cursor: pointer;
+    background-color: $btn_bg_color;
+    color: $font_color3;
+    transition: padding 0.3s linear, height 0.3s linear, opacity 0.3s linear;
+    .choice__icon-plus {
+      display: none;
+    }
+    .choice__icon-minus {
+      display: block;
+    }
+    .camsite-logo_default {
+      display: none;
+    }
+    .camsite-logo_white {
+      display: block;
+    }
+  }
+  &.has-image {
+    height: 40px;
+  }
+}
+
+.choice__icon {
+  color: $font_color3;
+  width: 16px;
+  height: 16px;
+}
+.choice__icon-minus {
+  display: none;
+}
+
+.camsite-logo {
+  &.camsite-logo_white {
+    display: none;
+  }
+}
+.camsite-logo__img {
+  width: auto;
+  max-width: 110px;
+  height: 25px;
+}
+
+.filters-actions {
+  padding: 20px 0;
+}
+
+.btn-clear {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font_family2;
+  font-weight: 400;
+  font-size: 12px;
+  color: $font_color3;
+  background-color: $bg_light_4;
+  text-transform: uppercase;
+  &:hover {
+    color: $font_color3;
+    background-color: $btn_bg_color_hover;
+  }
+  &:active {
+    color: $font_color3 !important;
+    background-color: $btn_bg_color_active !important;
+  }
+}
+
+.btn-clear__icon {
+  width: 18px;
+  height: 18px;
+  margin: 0 0 0 20px;
 }
