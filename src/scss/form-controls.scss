@@ -35,12 +35,17 @@
     box-shadow: none;
     background-color: $input_hover_bg;
     color: $input_hover_txt_color;
-    border-color: $bg_dark_1;
-    outline: 1px solid $bg_dark_1;
+    border-color: $btn_bg_color_active;
+    outline: 1px solid $btn_bg_color_active;
   }
   &::placeholder {
     color: $input_placeholder_color;
     opacity: 0.7;
+  }
+  &.invalid {
+    box-shadow: $input_invalid_boxshadow;
+    color: $input_invalid_color;
+    background: $input_invalid_bgcolor;
   }
   @media (min-width: 992px) {
     padding: 18px 40px;

@@ -53,6 +53,15 @@ body {
 
 }
 
+.section-padding {
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: 1200px) {
+    padding-left: 95px;
+    padding-right: 95px;
+  }
+}
+
 .container {
   @include make-container(40px);
   @media (min-width: 768px) {

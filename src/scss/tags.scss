@@ -1,7 +1,9 @@
 .tags-area {
-  padding: 57px 20px 63px;
+  padding-top: 57px;
+  padding-bottom: 63px;
   @media (min-width: 1200px) {
-    padding: 85px 95px 63px;
+    padding-top: 85px;
+    padding-bottom: 63px;
   }
 }
 

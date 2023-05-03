@@ -1,30 +1,26 @@
 .btn {
   width: 100%;
-  height: 69px;
+  height: 52px;
   padding: 14px 10px;
   border-radius: 0;
-  background-color: transparent;
-  background-image: url('data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20758%20158%22%20fill%3D%22none%22%20preserveAspectRatio%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M80.5165%202.38723C287.348%2043.9775%20473.659%20-5.08215%20668.831%2025.3382C709.829%2031.7239%20757.593%2057.9119%20757.593%2096.78C757.615%2097.05%20757.637%2097.3201%20757.554%2097.5963C757.198%20128.28%20709.681%20143.189%20668.645%20140.243C464.616%20124.087%20243.641%20186.674%2075.1755%20139.554C41.1879%20127.332%200.143938%2095.7135%200.0270863%2057.9119C-0.0021447%2057.5518%20-0.0240735%2057.2817%200.0516167%2056.9155C-0.0652348%2019.1138%2033.3817%20-7.09077%2080.5165%202.38723Z%22%20fill%3D%22%23FF95E1%22%2F%3E%0A%3C%2Fsvg%3E');
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: 100%;
+  background-color: $btn_bg_color;
   border: none;
-  font-family: $font_family;
-  font-size: 16px;
+  font-family: $font_family2;
+  font-size: 15px;
   font-weight: 400;
-  color: $font_color2;
+  color: $font_color3;
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
   position: relative;
   z-index: 1;
-  transition: 0.5s background-image;
+  transition: background-color 0.1s ease-in-out;
   &:hover {
-    color: $font_color2;
+    color: $font_color3;
     background-color: $btn_bg_color_hover;
   }
   &:active {
-    color: $font_color2 !important;
+    color: $font_color3 !important;
     background-color: $btn_bg_color_active !important;
   }
   &:focus {
@@ -34,8 +30,8 @@
 
   @media (min-width: 992px) {
     width: auto;
-    height: 157px;
-    font-size: 25px;
+    height: 70px;
+    font-size: 21px;
     padding: 20px 15px;
   }
 
