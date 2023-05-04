@@ -1,1 +1,44 @@
 .models {}
+
+.models-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px 20px 13px;
+  @media (min-width: 1200px) {
+    padding: 22px 22px 20px 30px;
+  }
+}
+
+.models-label {
+  font-family: $font_family2;
+  font-weight: 400;
+  color: $font_color;
+  font-size: 18px;
+  text-transform: uppercase;
+  @media (min-width: 1200px) {
+    font-size: 28px;
+  }
+}
+
+.models-btn {
+  width: 59px;
+  height: 40px;
+  padding: 9px 10px;
+  font-size: 11px;
+  line-height: 12px;
+  @media (min-width: 576px) {
+    width: auto;
+    padding: 14px 10px;
+  }
+  @media (min-width: 992px) {
+    width: auto;
+    height: 34px;
+    padding: 10px 15px;
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+
+.models-list {}
