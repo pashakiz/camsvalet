@@ -47,18 +47,21 @@
     color: $input_invalid_color;
     background: $input_invalid_bgcolor;
   }
-  @media (min-width: 992px) {
-    padding: 18px 40px;
+  @media (min-width: 1200px) {
+    padding: 18px 26px;
     font-size: $input_txt_size;
     line-height: $input_txt_lh;
   }
   &.form-control_login {
+    background-color: transparent;
     text-align: center;
     font-size: $input_txt_xs_size;
     line-height: $input_txt_xs_lh;
+    &::placeholder {
+      color: $font_color7;
+    }
     @media (min-width: 1200px) {
-      text-align: left;
-      padding: 18px 46px;
+      padding: 18px 26px;
       font-size: $input_txt_size;
       line-height: $input_txt_lh;
     }
@@ -67,20 +70,20 @@
 }
 
 input.form-control {
-  height: 51px;
+  height: 54px;
   @media (min-width: 992px) {
-    height: 80px;
+    height: 54px;
   }
   @media (min-width: 1200px) {
-    height: 80px;
+    height: 60px;
   }
   &.form-control_login {
-    height: 51px;
+    height: 54px;
     @media (min-width: 1200px) {
-      height: 80px;
+      height: 54px;
     }
     @media (min-width: 1400px) {
-      height: 80px;
+      height: 60px;
     }
   }
 }

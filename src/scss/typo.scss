@@ -43,65 +43,6 @@ h1 {
       font-size: inherit;
     }
   }
-
-}
-
-.h1_search {
-  font-family: $font_family2;
-  font-weight: 400;
-  color: $font_color;
-  font-size: 41px;
-  line-height: 50px;
-  margin: 0 0 31px;
-  @media (min-width: 992px) {
-    font-size: 50px;
-    line-height: 60px;
-  }
-  @media (min-width: 1200px) {
-    font-size: 66px;
-    line-height: 80px;
-    margin: 0 0 50px;
-  }
-  @media (min-width: 1400px) {
-    font-size: 80px;
-    line-height: 97px;
-    margin: 0 0 64px;
-  }
-}
-
-.h1_login {
-  font-family: $font_family;
-  color: $font_color;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 33px;
-  margin: 0 0 25px;
-  text-align: center;
-  text-transform: uppercase;
-  @media (min-width: 992px) {}
-  @media (min-width: 1200px) {
-    text-align: left;
-    font-size: 38px;
-    line-height: 57px;
-    margin: 0 0 32px;
-  }
-  @media (min-width: 1400px) {
-    font-size: 40px;
-    line-height: 58px;
-    margin: 0 0 42px;
-  }
-  span {
-    font-size: 22px;
-    @media (min-width: 992px) {
-      font-size: inherit;
-    }
-    @media (min-width: 1200px) {
-      font-size: inherit;
-    }
-    @media (min-width: 1400px) {
-      font-size: inherit;
-    }
-  }
 }
 
 h2 {
@@ -176,6 +117,34 @@ h2 {
       line-height: 20px;
     }
   }
+
+  &.h2_signup {
+    color: $font_color2;
+    line-height: 1.2;
+    text-align: left;
+    margin: 0;
+    span {
+      font-family: $font_family2;
+      font-size: 37px;
+      @media (min-width: 768px) {
+        font-size: 56px;
+      }
+      @media (min-width: 1400px) {
+        font-size: 74px;
+      }
+    }
+    span.smaller {
+      font-family: $font_family;
+      font-size: 24px;
+      text-transform: none;
+      @media (min-width: 768px) {
+        font-size: 36px;
+      }
+      @media (min-width: 1400px) {
+        font-size: 48px;
+      }
+    }
+  }
 }
 
 .h2_subscr {
@@ -200,6 +169,7 @@ h3 {
     margin-top: 64px;
     margin-bottom: 19px;
   }
+
   &.tags-area__title {
     font-family: $font_family2;
     font-weight: 400;
@@ -221,6 +191,26 @@ h3 {
       }
     }
   }
+
+  &.h3_signup {
+    font-family: $font_family;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 10px 0 25px;
+    text-transform: none;
+    text-align: left;
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+    @media (min-width: 1200px) {
+      margin: 25px 0 0;
+    }
+    @media (min-width: 1400px) {
+      font-size: 26px;
+    }
+  }
+
 }
 
 h4 {

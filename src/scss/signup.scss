@@ -1,0 +1,38 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  background-color: $bg_light_1;
+  padding: 40px 20px;
+  @media (min-width: 992px) {
+    padding: 70px 70px 60px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  @media (min-width: 1200px) {
+    padding: 70px 70px 60px;
+  }
+  @media (min-width: 1400px) {
+    padding: 70px 70px 60px;
+  }
+  @media (min-width: 1650px) {
+    padding: 70px 175px 60px;
+    justify-content: flex-start;
+  }
+}
+
+.signup__form {
+  width: 100%;
+  @media (min-width: 992px) {
+    min-width: 410px;
+  }
+  @media (min-width: 1200px) {
+    min-width: 420px;
+  }
+  @media (min-width: 1400px) {
+    min-width: 512px;
+  }
+  @media (min-width: 1650px) {
+    padding: 0 0 0 53px;
+  }
+}
