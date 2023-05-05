@@ -163,6 +163,12 @@
   color: $font_color3;
   font-size: 14px;
   line-height: 1.2;
+  @media (min-width: 360px) {
+    font-size: 11px;
+  }
+  @media (min-width: 576px) {
+    font-size: 14px;
+  }
 }
 
 .model__row {
@@ -170,6 +176,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 3px 0;
+  @media (min-width: 360px) {
+    padding: 5px 0;
+  }
+  @media (min-width: 576px) {
+    padding: 3px 0;
+  }
 }
 
 .model__name-age {
@@ -187,6 +199,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  @media (min-width: 360px) {
+    max-width: 58%;
+  }
+  @media (min-width: 576px) {
+    max-width: 70%;
+  }
 }
 
 .model__age {
