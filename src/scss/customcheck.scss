@@ -22,29 +22,29 @@ $cc_mark_bradius: 0;
 
 //switcher
 $cs_font_color: $font_color;
-$cs_font_size_mob: 13px;
-$cs_line_height_mob: 24px;
+$cs_font_size_mob: 14px;
+$cs_line_height_mob: 28px;
 $cs_font_size: 17px;
 $cs_line_height: 30px;
 
 $cs_icon_width_mob: 50px;
-$cs_icon_height_mob: 20px;
-$cs_icon_width: 90px;
-$cs_icon_height: 30px;
-$cs_icon_right_mob: 20px;
-$cs_icon_right: 30px;
+$cs_icon_height_mob: 16px;
+$cs_icon_width: 50px;
+$cs_icon_height: 16px;
+$cs_icon_right_mob: 26px;
+$cs_icon_right: 26px;
 $cs_icon_color: $body_bg_color;
-$cs_icon_border: 1px solid $font_color;
+$cs_icon_border: 1px solid $bg_dark_2;
 $cs_icon_bradius: 0;
 
-$cs_mark_width_mob: 20px;
-$cs_mark_height_mob: 20px;
-$cs_mark_width: 40px;
-$cs_mark_height: 30px;
-$cs_mark_border: 1px solid $font_color;
+$cs_mark_width_mob: 21px;
+$cs_mark_height_mob: 25px;
+$cs_mark_width: 21px;
+$cs_mark_height: 25px;
+$cs_mark_border: none;
 $cs_mark_bradius: 0;
 
-$cs_mark_color_off: $body_bg_color;
+$cs_mark_color_off: $bg_light_6;
 $cs_mark_color_on: $btn_bg_color;
 
 //switcher inline
@@ -146,15 +146,20 @@ $csi_icon_right: 37px;
 }
 
 .customcheck_switch {
+  border-bottom: 1px solid $bg_light_6;
+  padding-bottom: 35px;
+  @media (min-width: 992px) {
+    padding-bottom: 30px;
+  }
   & + .customcheck_switch {
-    margin-top: 34px;
+    margin-top: 22px;
     @media (min-width: 992px) {
-      margin-top: 47px;
+      margin-top: 23px;
     }
   }
   .customcheck__label {
     align-items: flex-start;
-    font-weight: 300;
+    font-weight: 400;
     line-height: $cs_line_height_mob;
     font-size: $cs_font_size_mob;
     //flex-direction: column;
@@ -197,7 +202,7 @@ $csi_icon_right: 37px;
         @media (min-width: 992px) {
           width: $cs_mark_width;
           height: $cs_mark_height;
-          transform: translateX(-25px);
+          //transform: translateX(-25px);
         }
       }
     }
@@ -215,9 +220,9 @@ $csi_icon_right: 37px;
         border: $cs_icon_border;
         .customcheck__mark {
           background-color: $cs_mark_color_on;
-          transform: translateX(15px);
+          transform: translateX(16px);
           @media (min-width: 992px) {
-            transform: translateX(26px);
+            //transform: translateX(26px);
           }
         }
       }
@@ -236,7 +241,7 @@ $csi_icon_right: 37px;
     flex-direction: row;
     align-items: center;
     text-transform: uppercase;
-    line-height: 24px;
+    line-height: 28px;
     font-size: $csi_font_size_mob;
     @media (min-width: 992px) {
       font-size: $csi_font_size;
