@@ -34,6 +34,20 @@ body {
   }
 }
 
+.main__text {
+  padding: 30px 20px 0;
+  @media (min-width: 992px) {
+    padding: 30px 20px 0;
+    max-width: 822px;
+  }
+  @media (min-width: 1400px) {
+    padding: 30px 100px 0;
+  }
+  &.main__text-wide {
+    max-width: none;
+  }
+}
+
 .section-padding {
   padding-left: 20px;
   padding-right: 20px;
@@ -62,9 +76,13 @@ body {
   }
 
   &.container_text {
-    padding-top: 0;
+    padding: 30px 20px 0;
     @media (min-width: 992px) {
-      max-width: 830px;
+      padding: 30px 20px 0;
+      max-width: 822px;
+    }
+    @media (min-width: 1400px) {
+      padding: 30px 100px 0;
     }
   }
 
