@@ -14,43 +14,6 @@ body {
   @media (min-width: 1200px) {
     padding-top: 131px;
   }
-
-  &.bg-color-profile {
-    background: $bg_light_1;
-    @media (min-width: 1200px) {
-      background: $body_bg_color;
-      background-image: url('../img/bg/bgd.svg');
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      background-size: 100%;
-      background-size: 1920px 1087px;
-    }
-    @media (min-width: 1920px) {
-      background-size: 100% 1087px;
-    }
-  }
-
-  &.bg-index {
-    background: $bg_light_1;
-    background-image: url('../img/bg/bgm-index.svg');
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: 100% 398px;
-    @media (min-width: 1200px) {
-      background-image: url('../img/bg/bgd-index.svg');
-      background-size: 1920px 900px;
-    }
-    @media (min-width: 1400px) {
-      background-size: 100% 988px;
-    }
-  }
-
-  &.bg-login {
-    @media (min-width: 1200px) {
-      background-image: url('../img/bg/bgd-login.svg');
-    }
-  }
-
 }
 
 .main__titlebox {
@@ -61,6 +24,13 @@ body {
   }
   @media (min-width: 1225px) {
     padding: 55px 100px;
+  }
+
+  &.main__titlebox-empty {
+    height: 65px;
+    @media (min-width: 1200px) {
+      height: 200px;
+    }
   }
 }
 
