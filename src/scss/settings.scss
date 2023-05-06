@@ -2,43 +2,58 @@ $settings-img-width: 280px;
 $settings-img-height: 195px;
 $settings-img-width-lg: 500px;
 $settings-img-height-lg: 380px;
-$settings-img-width-xl: 790px;
+$settings-img-width-xl: 660px;
 $settings-img-height-xl: 550px;
+$settings-img-width-xxl: 790px;
+$settings-img-height-xxl: 550px;
 
 $settings-img-wrap-width: 280px;
 $settings-img-wrap-height: 195px;
 $settings-img-wrap-width-lg: 500px;
 $settings-img-wrap-height-lg: 380px;
-$settings-img-wrap-width-xl: 790px;
+$settings-img-wrap-width-xl: 660px;
 $settings-img-wrap-height-xl: 550px;
+$settings-img-wrap-width-xxl: 790px;
+$settings-img-wrap-height-xxl: 550px;
 
-.settings-form {
-  @media (min-width: 992px) {}
+.settings {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
   @media (min-width: 1200px) {
-    max-width: 550px;
-    margin: 0 0 0 auto;
+    flex-direction: row;
+    padding: 0 50px 0 0;
   }
   @media (min-width: 1400px) {
-    max-width: 550px;
+    flex-direction: row;
+    padding: 0 100px 0 0;
+  }
+}
+
+.settings-form {
+  margin: 26px auto 0;
+  @media (min-width: 768px) {
+    max-width: 623px;
+  }
+  @media (min-width: 1200px) {
+    width: 623px;
+    margin: 35px 0 0 0;
+  }
+  @media (min-width: 1400px) {
+    width: 623px;
+    max-width: 623px;
   }
   @media (min-width: 1650px) {
-    max-width: 550px;
-    margin: 0 auto;
+    width: 623px;
+    max-width: 623px;
   }
 }
 
 .settings-photo {
   margin: 0 auto;
   position: relative;
-  width: calc(100% + 40px);
-  left: -20px;
-  //overflow: hidden;
-  //padding: 18px 0 0 0;
-  @media (min-width: 576px) {
-    left: 0;
-    width: $settings-img-wrap-width;
-    max-width: $settings-img-wrap-width;
-  }
+  width: $settings-img-wrap-width;
+  max-width: $settings-img-wrap-width;
   @media (min-width: 992px) {
     width: $settings-img-wrap-width-lg;
     max-width: $settings-img-wrap-width-lg;
@@ -46,27 +61,30 @@ $settings-img-wrap-height-xl: 550px;
   @media (min-width: 1200px) {
     width: $settings-img-wrap-width-lg;
     max-width: $settings-img-wrap-width-lg;
-    margin: 0 auto 0 0;
+    margin: 0 40px 0 0;
   }
   @media (min-width: 1400px) {
     width: $settings-img-wrap-width-xl;
     max-width: $settings-img-wrap-width-xl;
-    margin: 0 auto 0 0;
+  }
+  @media (min-width: 1530px) {
+    width: $settings-img-wrap-width-xxl;
+    max-width: $settings-img-wrap-width-xxl;
   }
 }
 
 .profile-photo {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  // width: $settings-img-width;
-  // max-width: $settings-img-width;
-  width: 100%;
-  max-width: 100%;
+  width: $settings-img-width;
+  max-width: $settings-img-width;
+  // width: 100%;
+  // max-width: 100%;
   height: $settings-img-height;
   max-height: $settings-img-height;
-  border-radius: 600px 600px 0 0;
-  background-color: $btn_bg_color;
+  border-radius: 0;
+  background-color: $bg_light_5;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -77,19 +95,16 @@ $settings-img-wrap-height-xl: 550px;
     max-height: $settings-img-height;
   }
   @media (min-width: 992px) {
-    border-radius: 300px 300px 0 0;
     width: $settings-img-width-lg;
     max-width: $settings-img-width-lg;
     height: $settings-img-height-lg;
     max-height: $settings-img-height-lg;
   }
   @media (min-width: 1200px) {
-    border-radius: 0;
     width: $settings-img-width-lg;
     max-width: $settings-img-width-lg;
     height: $settings-img-height-lg;
     max-height: $settings-img-height-lg;
-    margin-bottom: 25px;
   }
   @media (min-width: 1400px) {
     width: $settings-img-width-xl;
@@ -97,15 +112,17 @@ $settings-img-wrap-height-xl: 550px;
     height: $settings-img-height-xl;
     max-height: $settings-img-height-xl;
   }
+  @media (min-width: 1530px) {
+    width: $settings-img-width-xxl;
+    max-width: $settings-img-width-xxl;
+    height: $settings-img-height-xxl;
+    max-height: $settings-img-height-xxl;
+  }
 }
 
 .settings__btn {
-  margin: 0 0 30px 0;
+  margin: 0 0 21px 0;
   @media (min-width: 992px) {
-    margin: 0 0 60px 0;
-  }
-  @media (min-width: 1200px) {
-    margin: 0;
-    height: 114px;
+    margin: 0 0 24px 0;
   }
 }

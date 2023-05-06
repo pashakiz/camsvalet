@@ -90,26 +90,26 @@ input.form-control {
 
 textarea.form-control {
   border-radius: $textarea_border_radius_mob;
-  min-height: 175px;
+  min-height: 76px;
   @media (min-width: 768px) {
-    height: 175px;
+    height: 76px;
   }
   @media (min-width: 1200px) {
     border-radius: $textarea_border_radius;
-    height: 144px;
+    height: 80px;
   }
 }
 
 .custom-file {
   display: block;
-  width: 278px;
+  width: 100%;
   height: auto;
   position: relative;
   @media (min-width: 768px) {
-    width: 278px;
+    width: 100%;
   }
   @media (min-width: 1200px) {
-    width: 353px;
+    width: 100%;
   }
 
   .custom-file-input {
